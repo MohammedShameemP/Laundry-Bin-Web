@@ -1,4 +1,5 @@
 const mongoose =require('mongoose');
+const User = require('./user');
 
 const productschema=new mongoose.Schema({
 	image: { type: String, required: true },
@@ -7,3 +8,4 @@ const productschema=new mongoose.Schema({
 })
 const Product=mongoose.model("products",productschema);    
 module.exports=Product;
+

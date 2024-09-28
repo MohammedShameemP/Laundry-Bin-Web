@@ -7,6 +7,7 @@ import OtpLogin from "./components/OtpLogin";
 import RegisterPage from "./components/RegisterPage";
 import HomePage from "./components/HomePage";
 import Washing from "./components/Washing";
+import Instructions from "./components/Instructions";
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 				<Route path="/register" Component={RegisterPage} />
 				<Route path="/Home" Component={HomePage} />
 				<Route path="/Washing" Component={Washing} />
+				<Route path="/Instructions" Component={Instructions} />
 
 			</Routes>
 		</>

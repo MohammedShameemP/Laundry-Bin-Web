@@ -45,5 +45,7 @@ exports.sendOTPviaEmail = async (email, userId) => {
             console.log("Email sent successfully to :".yellow, info.accepted);
         }
     });
+    await saveOTPData(userId, otp);
+    
     console.log("email===",email);
 };

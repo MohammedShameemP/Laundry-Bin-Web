@@ -18,7 +18,7 @@ exports.sendOTPviaSMS = async (phoneNumber, userId) => {
     console.log("phoneNumber:",phoneNumber);
     const otp = generateOTP();
     const message = `Your OTP is: ${otp}`;
-    console.log( message );
+    console.log( message, 'message' );
     twilioClient.messages
         .create({
             body: message,
@@ -26,8 +26,13 @@ exports.sendOTPviaSMS = async (phoneNumber, userId) => {
             to: "+91" + phoneNumber,
         })
         .then(async (message) => {
-            await saveOTPData(userId, otp);
+            // await saveOTPData(userId, otp);
             console.log("OTP sent successfully via SMS to :");
         })
-        .catch((error) => console.error("Error sending OTP via SMS:", error));
+        .catch((error) => console.error("Error sending OTP via SMS:", error))
+        .finally(async() => {
+            console.log('finally');
+            
+            await saveOTPData(userId, otp);
+        });
 };

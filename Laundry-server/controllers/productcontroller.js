@@ -3,6 +3,7 @@
 
 const express = require('express');
 const Product = require('../models/product');
+const WashingProducts = require('../models/userwashings');
 
 exports.all_products = async (req, res) => {
     console.log("in all_products api ");
@@ -14,3 +15,20 @@ exports.all_products = async (req, res) => {
         res.status(500).json({ error: true, status: false, message: "Server error", data: error });
     }
 };
+
+
+exports.count=async (req,res)=>{
+    console.log(req.body);
+    try {
+        const {id}=req.params;
+        const count=req.body;
+        if (count) {
+            const countupdate=await WashingProducts.findByIdAndUpdate(id,{count});
+            res.status(200).json({status:true,error:false,message:"count update succesfully",data:countupdate})
+        }
+    } catch (error) {
+        res.status(500).json({status:false,error:true,message:"count not available"})
+
+    }
+    
+}

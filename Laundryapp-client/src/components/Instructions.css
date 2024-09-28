@@ -1,0 +1,40 @@
+.instructionmain{
+    height: 100vh;
+    width: 100vw;
+    background-color: #ECF3F6;
+    
+    
+}
+.instructionhead{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    gap: 700px;
+
+}
+.ileftarrow{
+    padding-left: 40px;
+}
+.water{
+
+    width: 600px;
+    height: 200px;
+    display: flex;
+    gap: 70px;
+}
+.hotimgtext{
+    display: flex;
+    gap: 20px;
+}
+.cold{
+    display: flex;
+}
+.coldimgtext{
+    display: flex;
+    gap: 20px;
+}
+.sun{
+    width: 30px;
+    height: 30px;
+}
