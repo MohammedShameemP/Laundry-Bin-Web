@@ -32,3 +32,23 @@ exports.count=async (req,res)=>{
     }
     
 }
+
+exports.cartdetail=async (req,res)=>{
+    console.log(req.body);
+
+    try {
+
+        const {id}=req.params
+        const cart=req.body
+        if(cart){
+            const 
+            const createcart=await cartDetail.create()
+
+
+        }
+        
+    } catch (error) {
+        
+    }
+    
+}

@@ -1,7 +1,10 @@
 import React from 'react'
 import "./Washinproceed.css"
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { cartdeatails } from '../Actions/products';
 const Washinproceed = () => {
+  const navigate=useNavigate();
   const { productcart } = useSelector((state) => state.cart);
   console.log("productcart",productcart);
   let totalcount=0; 
@@ -12,10 +15,40 @@ const Washinproceed = () => {
   });
   console.log("totalcount",totalcount);
   console.log("totalprice",totalprice);
+
+  const handleproceed=async ()=>{
+
+    const user = JSON.parse(localStorage.getItem("data"));
+    console.log("user",user);
+    const id=user._id;
+
+    
+    const response=await cartdeatails(productcart,id)
+    console.log("response",response);
+    
+
+
+    
+    
+    
+ 
+  }
   
 
   return (
-    <div><button className='proceedbtn' >Washinproceed</button></div>
+    <>
+    {totalcount && totalprice &&(<div className='procmain'>
+    <div className='proceedbtn'>
+      
+  
+    <div><div>{totalprice}</div>
+    <div>{totalcount}items</div></div>
+    <button className='btnproce' onClick={handleproceed} >Proceed</button>
+    <img src="./" alt="" />
+    
+    </div>
+    </div>)}
+    </>
   )
 }
 

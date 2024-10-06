@@ -12,3 +12,13 @@ export const products=async ()=>{
         
     }
 }
+ export const cartdeatails=async (data,id)=>{
+    try {
+        const response=await axios.post ("http://localhost:2006/api/cartdetail/"+id,data)
+        
+
+        
+    } catch (error) {
+        
+    }
+ }

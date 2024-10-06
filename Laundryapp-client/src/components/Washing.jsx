@@ -14,7 +14,6 @@ function Washing() {
 	// console.log("cartcount=",cartcount);
 	// console.log("cart=",cart);
 
-	const [count, setCount] = useState(0);
 
 	const [product, setProduct] = useState([]); // Initialize as an empty
 

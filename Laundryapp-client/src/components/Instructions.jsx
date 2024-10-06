@@ -7,9 +7,10 @@ const Instructions = () => {
             <div className='ileftarrow'><img src="./arrow-left.svg" alt="" /></div>
             <div className='instructionh1'><h1>Instructions</h1></div>
             </div>
+            <div className='method'>
             <div className='water'>
                 <div><h2>Water</h2></div>
-                <div className='hot'>
+                <div className='hotcold'><div className='hot'>
                     <div className='hotimgtext'><img src="./sun.svg" alt="" /><h2>Hot</h2></div>
                 </div>
                 <div className='cold'>
@@ -18,16 +19,17 @@ const Instructions = () => {
                   </div>
 
                 </div>
+                </div>
 
             </div>
             <div className='water'>
                 <div><h2>FabricSoftener</h2></div>
                 <div className='hot'>
-                    <div className='hotimgtext'><img src="./sun.svg" alt="" /><h2>Scented</h2></div>
+                    <div className='hotimgtext'><div className='whitecircle'><img src="./sun.svg" alt="" /></div><h2>Scented</h2></div>
                 </div>
                 <div className='cold'>
                   <div className='coldimgtext'>
-                  <img className='sun' src="./sun.png" alt="" /><h2>Normel</h2>
+                  <div className='bluecircle'><img className='sun' src="./sun.png" alt="" /></div><h2>Normel</h2>
                   </div>
 
                 </div>
@@ -44,6 +46,7 @@ const Instructions = () => {
                   <img className='sun' src="./sun.png" alt="" /><h2>Normel</h2>
                   </div>
 
+                </div>
                 </div>
 
             </div>

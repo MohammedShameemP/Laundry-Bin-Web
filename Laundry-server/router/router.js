@@ -1,7 +1,7 @@
 const express = require("express");
 // const { register,login } = require("../middleware/");
 const { all_services } = require("../controllers/servicescontroller");
-const { all_products, count } = require("../controllers/productcontroller");
+const { all_products, count, cartdetail } = require("../controllers/productcontroller");
 const { register, login, verify_otp_login } = require("../controllers/auth");
 const router = express.Router();
 
@@ -20,6 +20,10 @@ router.get("/all_services",all_services);
 router.post("/verify_otp_login",verify_otp_login)
 
 router.put("/count/:id",count)
+
+// cart details save
+router.post("/cartdetail/:id",cartdetail)
+
 
 
 

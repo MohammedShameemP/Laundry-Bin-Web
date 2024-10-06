@@ -20,7 +20,7 @@ const cartSlice = createSlice({
             const obj = {
                 productId: _id,
                 cartcount: 1,
-                price:price,
+                price:Number(price),
 
                 
             }            

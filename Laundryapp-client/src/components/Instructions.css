@@ -20,8 +20,9 @@
 
     width: 600px;
     height: 200px;
+}
+.hotcold{
     display: flex;
-    gap: 70px;
 }
 .hotimgtext{
     display: flex;
@@ -38,3 +39,22 @@
     width: 30px;
     height: 30px;
 }
+.bluecircle{
+    width: 40px;
+    height: 40px;
+    background-color:#1FACF3;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whitecircle{
+    width: 40px;
+    height: 40px;
+    background-color:#1FACF3;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
