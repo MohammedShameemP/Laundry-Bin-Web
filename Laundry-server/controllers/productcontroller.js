@@ -4,6 +4,7 @@
 const express = require('express');
 const Product = require('../models/product');
 const WashingProducts = require('../models/userwashings');
+const cartDetail = require('../models/cartdetail');
 
 exports.all_products = async (req, res) => {
     console.log("in all_products api ");
@@ -34,20 +35,25 @@ exports.count=async (req,res)=>{
 }
 
 exports.cartdetail=async (req,res)=>{
-    console.log(req.body);
+    console.log("req.body in detail",req.body);
 
     try {
 
-        const {id}=req.params
-        const cart=req.body
-        if(cart){
-            const 
-            const createcart=await cartDetail.create()
+        const {id}=req.query
+        const cart=req.body.data
+        const totalprice=req.body.totalprice
 
-
-        }
+        const newDetails = new cartDetail({
+            userid:id,
+            totalprice,
+            products:cart
+        })
+        await newDetails.save()
+        console.log("detaislsssssss=",newDetails);
         
+                
     } catch (error) {
+        console.log("error =",error);
         
     }
     

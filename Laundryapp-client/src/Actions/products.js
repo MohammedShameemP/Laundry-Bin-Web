@@ -12,13 +12,16 @@ export const products=async ()=>{
         
     }
 }
- export const cartdeatails=async (data,id)=>{
+ export const cartdetails=async (data,totalprice,id)=>{
     try {
-        const response=await axios.post ("http://localhost:2006/api/cartdetail/"+id,data)
+        console.log({data});
+        
+        const response=await axios.post (`http://localhost:2006/api/cartdetail?id=${id}`,{data,totalprice})
         
 
         
     } catch (error) {
+        console.log(error);
         
     }
  }

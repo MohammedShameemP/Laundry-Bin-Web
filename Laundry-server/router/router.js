@@ -22,7 +22,7 @@ router.post("/verify_otp_login",verify_otp_login)
 router.put("/count/:id",count)
 
 // cart details save
-router.post("/cartdetail/:id",cartdetail)
+router.post("/cartdetail/",cartdetail)
 
 
 
