@@ -8,6 +8,7 @@ import RegisterPage from "./components/RegisterPage";
 import HomePage from "./components/HomePage";
 import Washing from "./components/Washing";
 import Instructions from "./components/Instructions";
+import Summary from "./components/Summary";
 
 function App() {
 	return (
@@ -23,6 +24,7 @@ function App() {
 				<Route path="/Home" Component={HomePage} />
 				<Route path="/Washing" Component={Washing} />
 				<Route path="/Instructions" Component={Instructions} />
+				<Route path="/Summary" Component={Summary} />
 
 			</Routes>
 		</>

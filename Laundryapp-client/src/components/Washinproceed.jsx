@@ -21,6 +21,7 @@ const Washinproceed = () => {
 		const user = JSON.parse(localStorage.getItem("data"));
 		console.log("user in washingproceed", user);
 		const id = user._id;
+		navigate("/Instructions")
 
 		const response = await cartdetails(productcart,totalprice, id);
 		console.log("response", response);
